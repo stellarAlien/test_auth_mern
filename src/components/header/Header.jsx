@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { HiOutlineSearch } from "react-icons/hi";
 import { SlMenu } from "react-icons/sl";
 import { VscChromeClose } from "react-icons/vsc";
-import { useNavigate, useLocation, useHistory } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 import "./style.scss";
 
@@ -101,7 +101,7 @@ const Header = () => {
                         <HiOutlineSearch onClick={openSearch} />
                     </li>
                 </ul>
-                    (isLoggedIn ? { <Logout/> } : <div className='loginButton'>
+                    (isLoggedIn ? { <Logout/> } : <div className='loginButtonContainer'>
 				        <button className='loginButton' onClick={navigate('/login')}>
 					        Login
 				        </button>

@@ -13,6 +13,7 @@ import Details from "./pages/details/Details";
 import SearchResult from "./pages/searchResult/SearchResult";
 import Explore from "./pages/explore/Explore";
 import PageNotFound from "./pages/404/PageNotFound";
+import Login from './components/login/Login';
 
 // Define the main function component called App
 function App() {
@@ -86,7 +87,7 @@ function App() {
             <Header />
             <Routes>
                 {user && <Route path="/" element={<Home/>}/>}
-                <Route path="/" element={<Navigate replace to="/login" />} />
+                <Route path="/login" element={<Login/>} />
                 <Route path="/:mediaType/:id" element={<Details />} />
                 <Route path="/search/:query" element={<SearchResult />} />
                 <Route path="/explore/:mediaType" element={<Explore />} />
