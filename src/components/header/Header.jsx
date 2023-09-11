@@ -101,11 +101,13 @@ const Header = () => {
                         <HiOutlineSearch onClick={openSearch} />
                     </li>
                 </ul>
-                    (isLoggedIn ? { <Logout/> } : <div className='loginButtonContainer'>
+                <ContentWrapper>
+                   {isLoggedIn ?(<Logout/> ) : (<div className='loginButtonContainer'>
 				        <button className='loginButton' onClick={navigate('/login')}>
 					        Login
 				        </button>
-		            </div>)
+		            </div>)}
+                    </ContentWrapper>
 
                 <div className="mobileMenuItems">
                     <HiOutlineSearch onClick={openSearch} />
